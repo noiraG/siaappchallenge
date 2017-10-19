@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SIAappchallenge</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps_raw">Map</string>
 </resources>
