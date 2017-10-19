@@ -10,6 +10,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -43,9 +44,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        GroundOverlayOptions overlay1 = new GroundOverlayOptions();
-        BitmapDescriptor image = ;
+        LatLng australia = new LatLng(25.2744, 133.7751);
+        GroundOverlayOptions australiaMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.australiamap)).position(australia, 5000000f, 5000000f);
+        mMap.addGroundOverlay(australiaMap);
 
 
         try {
@@ -64,5 +65,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng singapore = new LatLng(1.3518, 103.8198);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(singapore));
+
     }
 }
