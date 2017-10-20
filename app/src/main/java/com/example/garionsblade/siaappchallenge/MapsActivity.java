@@ -49,15 +49,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng france = new LatLng(46.733, 1.66734);
         LatLng unitedkingdom = new LatLng (54.689, -2.9385);
         LatLng singapore = new LatLng(1.3518, 103.8198);
+        LatLng unitedstates = new LatLng(37.1176, -95.9846);
+        LatLng china = new LatLng(36.93815, 104.1279);
+        LatLng germany = new LatLng(51.0982, 10.4183);
 
         GroundOverlayOptions australiaMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.australia)).position(australia, 4000000f, 3730000f);
         GroundOverlayOptions franceMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.france)).position(france, 1000000f, 973000f);
         GroundOverlayOptions unitedkingdomMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.unitedkingdom)).position(unitedkingdom, 600000f, 1051700f);
+        GroundOverlayOptions unitedstatesMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.unitedstates)).position(unitedstates, 5200000f, 2732700f);
+        GroundOverlayOptions chinaMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.china)).position(china, 5500000f, 3755300f);
+        GroundOverlayOptions germanyMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.germany)).position(germany, 663000f, 855084f);
 
         mMap.addGroundOverlay(australiaMap);
         mMap.addGroundOverlay(franceMap);
         mMap.addGroundOverlay(unitedkingdomMap);
-
+        mMap.addGroundOverlay(unitedstatesMap);
+        mMap.addGroundOverlay(chinaMap);
+        mMap.addGroundOverlay(germanyMap);
 
         try {
             // Customise the styling of the base map using a JSON object defined
@@ -74,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(unitedkingdom));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(germany));
 
     }
 }

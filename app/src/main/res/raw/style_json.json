@@ -3,7 +3,8 @@
     "elementType": "geometry",
     "stylers": [
       {
-        "color": "#ebe3cd"
+        "color": "#003778",
+        "weight": "1px"
       }
     ]
   },
@@ -11,7 +12,7 @@
     "elementType": "labels.text.fill",
     "stylers": [
       {
-        "color": "#523735"
+        "color": "#013B82"
       }
     ]
   },
@@ -36,7 +37,7 @@
     "featureType": "administrative",
     "elementType": "geometry.stroke",
     "stylers": [
-      {
+      { "weight": "1px",
         "color": "#c9b2a6"
       }
     ]
@@ -133,7 +134,7 @@
     "elementType": "geometry",
     "stylers": [
       {
-        "color": "#dfd2ae"
+        "color": "#FDFEFF"
       }
     ]
   },
@@ -328,7 +329,7 @@
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#b9d3c2"
+        "color": "#003778"
       }
     ]
   },
@@ -346,7 +347,7 @@
     "elementType": "labels.text.fill",
     "stylers": [
       {
-        "color": "#92998d"
+        "color": "#003778"
       }
     ]
   }
