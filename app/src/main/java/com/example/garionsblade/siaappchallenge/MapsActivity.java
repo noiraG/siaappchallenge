@@ -60,7 +60,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         GroundOverlayOptions chinaMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.china)).position(china, 5500000f, 3755300f);
         GroundOverlayOptions germanyMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.germany)).position(germany, 663000f, 855084f);
 
-        mMap.addGroundOverlay(australiaMap);
+        GroundOverlayOptions australiaFree = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.australia_free)).position(australia, 4000000f, 3730000f);
+        GroundOverlayOptions franceFree = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.france_free)).position(france, 1000000f, 973000f);
+        GroundOverlayOptions unitedkingdomFree = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.unitedkingdom_free)).position(unitedkingdom, 600000f, 1051700f);
+        GroundOverlayOptions unitedstatesFree = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.unitedstates_free)).position(unitedstates, 5200000f, 2732700f);
+        GroundOverlayOptions chinaFree = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.china_free)).position(china, 5500000f, 3755300f);
+        GroundOverlayOptions germanyFree = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.germany_free)).position(germany, 663000f, 855084f);
+
+        mMap.addGroundOverlay(australiaFree);
         mMap.addGroundOverlay(franceMap);
         mMap.addGroundOverlay(unitedkingdomMap);
         mMap.addGroundOverlay(unitedstatesMap);
