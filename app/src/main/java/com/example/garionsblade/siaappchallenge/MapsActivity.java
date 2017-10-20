@@ -44,9 +44,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng australia = new LatLng(25.2744, 133.7751);
-        GroundOverlayOptions australiaMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.australiamap)).position(australia, 5000000f, 5000000f);
+
+        LatLng australia = new LatLng(-27.1032, 133.4855);
+        LatLng france = new LatLng(46.733, 1.66734);
+        LatLng unitedkingdom = new LatLng (54.689, -2.9385);
+        LatLng singapore = new LatLng(1.3518, 103.8198);
+
+        GroundOverlayOptions australiaMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.australia)).position(australia, 4000000f, 3730000f);
+        GroundOverlayOptions franceMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.france)).position(france, 1000000f, 973000f);
+        GroundOverlayOptions unitedkingdomMap = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.drawable.unitedkingdom)).position(unitedkingdom, 600000f, 1051700f);
+
         mMap.addGroundOverlay(australiaMap);
+        mMap.addGroundOverlay(franceMap);
+        mMap.addGroundOverlay(unitedkingdomMap);
 
 
         try {
@@ -63,8 +73,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         // Add a marker in Sydney and move the camera
-        LatLng singapore = new LatLng(1.3518, 103.8198);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(singapore));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(unitedkingdom));
 
     }
 }
